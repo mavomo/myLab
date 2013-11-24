@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13852904470370" configfile="/com.tutorials.fullapp.cm.Presentation/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/closets/createCloset.xhtml" x="122" y="178" id="pf13852990663401" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf13852990663402" inlinks="pf13852990663402" path="/pages/closets/createCloset.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/closets/updateCloset.xhtml" id="pf13853000743313" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf13853000743314" inlinks="pf13853000743314" path="/pages/closets/updateCloset.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/closets/deleteCloset.xhtml" id="pf13853000809485" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" outlinks="pf13853000809486" inlinks="pf13853000809486" path="/pages/closets/deleteCloset.xhtml"/>
+  <links id="pf13852990663402" target="pf13852990663401" source="pf13852990663401" outcome="createCloset" redirect="true">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13853000743314" target="pf13853000743313" source="pf13853000743313" outcome="updateCloset"/>
+  <links id="pf13853000809486" target="pf13853000809485" source="pf13853000809485" outcome="deleteCloset"/>
+</pageflow:Pageflow>

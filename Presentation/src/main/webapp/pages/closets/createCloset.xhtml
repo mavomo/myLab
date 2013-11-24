@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'
+	xmlns:f='http://java.sun.com/jsf/core'
+	xmlns:h='http://java.sun.com/jsf/html'
+	xmlns:ui='http://java.sun.com/jsf/facelets'>
+<h:head>
+	<h:outputStylesheet library='css' name='main.css'/>
+</h:head>
+
+<h:body>
+	<h:form>
+		<h:messages />
+		<h3>${msgs.closetCreateHeader}</h3>
+		
+		<h:panelGrid columns='2' styleClass='panelGrid'	rowClasses='panelFirstLine,panelNextLine'>
+			
+			<h:outputLabel for='closetSerialNumber' value='#{msgs.closetSerialNumber}' />
+			<h:inputText id='closetSerialNumber' value='#{closetManagedBean.closet.serialNumber}' required='true'
+				requiredMessage='#{msgs.closetSerialNumberRequired}' />
+				
+			<h:outputLabel for='closetHeight' value='#{msgs.closetHeight}' />
+			<h:inputText id='closetHeight' value='#{closetManagedBean.closet.height}' required='false'>
+				<f:convertNumber />
+			</h:inputText>						
+			<h:outputLabel for='closetWidth' value='#{msgs.closetWidth}' />
+			<h:inputText id='closetWidth' value='#{closetManagedBean.closet.width}' />
+			
+			<h:outputLabel for='closetDepth' value='#{msgs.closetDepth}' />
+			<h:inputText id='closetDepth' value='#{closetManagedBean.closet.depth}' required='false' />
+						
+			<h:outputLabel for='closetNbShelves' value='#{msgs.closetNbShelves}' />
+			<h:inputText id='closetNbShelves' value='#{closetManagedBean.closet.numShelves}' />	
+				
+			<h:outputLabel for='closetIsDivided' value='#{msgs.closetIsDivided}' />
+			<h:selectOneRadio id='closetIsDivided' value='#{closetManagedBean.closet.divided}'>
+				 <f:selectItem itemLabel="yes" itemValue="#{true}"/>
+                 <f:selectItem itemLabel="no" itemValue="#{false}"/>
+			</h:selectOneRadio>					
+		</h:panelGrid>
+		
+		<h:panelGrid columns='2'>		
+			<h:commandButton action='#{closetManagedBean.createClosetEnd()}'
+				value='#{msgs.create}' />
+			<h:commandButton action='#{closetManagedBean.listAllClosets()}' value='#{msgs.cancel}' immediate='true' />
+		</h:panelGrid>
+		<br />
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+<!-- 	<parent> -->
+<!-- 		<groupId>com.tutorials.fullapp</groupId> -->
+<!-- 		<artifactId>ClosetManagementEJB</artifactId> -->
+<!-- 		<version>1.0</version> -->
+<!-- 	</parent> -->
+
+	<groupId>com.tutorials.fullapp</groupId>
+	<artifactId>Presentation</artifactId>
+	<version>1.1</version>
+	<packaging>war</packaging>
+
+	<name>Closet Management - presentation Layer </name>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tutorials.fullapp</groupId>
+			<artifactId>Business</artifactId>
+			<version>1.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>Presentation</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
